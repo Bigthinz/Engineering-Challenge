@@ -5,13 +5,16 @@ import { useQuery, gql } from '@apollo/client'
 
 const GET_DATA = gql`
 query {
-  characters {
-    results {
-        id
-        name
-        image
-    }
+  transactions {
+    _id
+		date
+		name
+		status
+		type
   }
+ 
+
+
 
 }
 
@@ -36,9 +39,9 @@ const DataQuery = () => {
             loading ? <p>Loading...</p> : <div className='app'>
                 
                    { data.characters.results.map(character => (
-                        <div key={character.id}>
+                        <div key={character.date}>
                             <h3>{character.name}</h3>
-                            <img src={character.image} alt={character.name}/>
+                            <img src={character.status} alt={character.name}/>
                         </div>
                             )
                 )

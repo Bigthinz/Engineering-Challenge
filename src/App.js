@@ -1,5 +1,6 @@
 import './App.css';
 import { useState } from 'react'
+import DataQuery from './DataQuery';
 // import DataQuery from './DataQuery';
 
 
@@ -13,7 +14,7 @@ function App() {
 
   return (
     <div className="app">
-      {/* <DataQuery/> */}
+      <DataQuery/>
 
       <div className='search'>
         <input 

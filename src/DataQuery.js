@@ -6,7 +6,6 @@ import { useQuery, gql } from '@apollo/client'
 const GET_DATA = gql`
 query {
   transactions {
-    _id
 		date
 		name
 		status
@@ -35,20 +34,17 @@ const DataQuery = () => {
    console.log(error, loading, data)
   return (
     <div>
-        {
+        {/* {
             loading ? <p>Loading...</p> : <div className='app'>
                 
-                   { data.characters.results.map(character => (
-                        <div key={character.date}>
-                            <h3>{character.name}</h3>
-                            <img src={character.status} alt={character.name}/>
-                        </div>
+                   { data.transactions.map(character => (
+                        console.log(character)
                             )
                 )
                    }
                 
             </div>
-        }
+        } */}
         
     </div>
   )
